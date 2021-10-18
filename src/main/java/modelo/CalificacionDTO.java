@@ -9,12 +9,12 @@ package modelo;
  *
  * @author luciano
  */
-public class Calificacion {
+public class CalificacionDTO {
     private int CalifID;
     private String CaliroStars;
     private String CalifComentario;
 
-    public Calificacion(int CalifID, String CaliroStars, String CalifComentario) {
+    public CalificacionDTO(int CalifID, String CaliroStars, String CalifComentario) {
         this.CalifID = CalifID;
         this.CaliroStars = CaliroStars;
         this.CalifComentario = CalifComentario;

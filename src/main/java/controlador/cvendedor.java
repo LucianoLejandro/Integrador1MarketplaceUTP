@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import modelo.Vendedor;
+import modelo.VendedorDTO;
 
 /**
  *
@@ -56,7 +56,7 @@ public class cvendedor extends HttpServlet {
                 request.getRequestDispatcher("errores.jsp").forward(request, response);
             }
 */
-            Vendedor v1 = new Vendedor(vnombres, vapellidop, vapellidom, vusuario, vcontrasenia);
+            VendedorDTO v1 = new VendedorDTO(vnombres, vapellidop, vapellidom, vusuario, vcontrasenia);
             Conexion cn = new Conexion();
             
             if (cn.Insertar(v1) > 0){

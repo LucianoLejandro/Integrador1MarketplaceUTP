@@ -9,7 +9,7 @@ package modelo;
  *
  * @author luciano
  */
-public class Vendedor {
+public class VendedorDTO {
     private int idvendedor;
     private String VNombres;
     private String VApellidoP;
@@ -17,7 +17,7 @@ public class Vendedor {
     private String VUsuario;
     private String Vcontrasenia;
 
-    public Vendedor(String VNombres, String VApellidoP, String VApellidoM, String VUsuario, String Vcontrasenia) {
+    public VendedorDTO(String VNombres, String VApellidoP, String VApellidoM, String VUsuario, String Vcontrasenia) {
         
         this.VNombres = VNombres;
         this.VApellidoP = VApellidoP;

@@ -13,7 +13,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import modelo.Vendedor;
+import modelo.VendedorDTO;
 
 /**
  *
@@ -35,7 +35,7 @@ public class Conexion {
         }
     }
     
-    public int Insertar(Vendedor v){
+    public int Insertar(VendedorDTO v){
         int bandera = 0;
         try {
             String query = "insert into Vendedor (VNombres,VApellidoP,VApellidoM,VUsuario,Vcontrasenia)"

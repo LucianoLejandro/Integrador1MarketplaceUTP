@@ -9,7 +9,7 @@ package modelo;
  *
  * @author luciano
  */
-public class comprador {
+public class compradorDTO {
     private int CID;    
     private String CNombres;
     private String CApellidoP;
@@ -18,7 +18,7 @@ public class comprador {
     private String CTelefono;
     private int CodDireccion;
 
-    public comprador(int CID, String CNombres, String CApellidoP, String CApellidoM, String CDNI, String CTelefono, int CodDireccion) {
+    public compradorDTO(int CID, String CNombres, String CApellidoP, String CApellidoM, String CDNI, String CTelefono, int CodDireccion) {
         this.CID = CID;
         this.CNombres = CNombres;
         this.CApellidoP = CApellidoP;
