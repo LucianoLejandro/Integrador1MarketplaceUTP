@@ -16,9 +16,9 @@ public class comprador {
     private String CApellidoM;
     private String CDNI;
     private String CTelefono;
-    private String CodDireccion;
+    private int CodDireccion;
 
-    public comprador(int CID, String CNombres, String CApellidoP, String CApellidoM, String CDNI, String CTelefono, String CodDireccion) {
+    public comprador(int CID, String CNombres, String CApellidoP, String CApellidoM, String CDNI, String CTelefono, int CodDireccion) {
         this.CID = CID;
         this.CNombres = CNombres;
         this.CApellidoP = CApellidoP;
@@ -76,13 +76,14 @@ public class comprador {
         this.CTelefono = CTelefono;
     }
 
-    public String getCodDireccion() {
+    public int getCodDireccion() {
         return CodDireccion;
     }
 
-    public void setCodDireccion(String CodDireccion) {
+    public void setCodDireccion(int CodDireccion) {
         this.CodDireccion = CodDireccion;
     }
+
     
     
     
