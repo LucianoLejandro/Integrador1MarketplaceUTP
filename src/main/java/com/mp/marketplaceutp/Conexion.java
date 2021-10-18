@@ -34,7 +34,7 @@ public class Conexion {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+    //PAra sacar de aqui
     public int Insertar(VendedorDTO v){
         int bandera = 0;
         try {
