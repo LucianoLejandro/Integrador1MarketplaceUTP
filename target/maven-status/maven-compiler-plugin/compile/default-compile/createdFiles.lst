@@ -5,6 +5,7 @@ modelo/VendedorDTO.class
 modelo/catalogoProductosDTO.class
 com/mp/marketplaceutp/Conexion.class
 modelo/CalificacionDTO.class
+modelo/VendedorDAO.class
 modelo/compradorDTO.class
 controlador/cvendedor.class
 modelo/ProductoDTO.class
