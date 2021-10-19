@@ -21,6 +21,12 @@ create table Vendedor(
     Vcontrasenia varchar (20),
     primary key (idvendedor)
     )
+create table ListaPedidos(
+    ListPedidosID int not null AUTO_INCREMENT,
+    ListPedidosCantida varchar(50),
+    ListPedidosPrecio varchar(50),
+    primary key (ListPedidosID)
+)
 create table Pedido(
     PedidoID int not null AUTO_INCREMENT,
     Total varchar(50),
@@ -32,7 +38,7 @@ create table Pedido(
 
     primary key (PedidoID),
     foreign key (ListPedidosID) references ListaPedidos(ListPedidosID),
-    foreign key (CID) references comprador(CID)  
+    foreign key (CID) references comprador(CID)
 )
 
 create table Calificacion(
@@ -51,9 +57,9 @@ create table Tienda(
     Distrito varchar(255),
 
     primary key (TRUC),
-    foreign key (idvendedor) references Vendedor(idvendedor),  
-    foreign key (CalifID) references Calificacion(CalifID) 
-) 
+    foreign key (idvendedor) references Vendedor(idvendedor),
+    foreign key (CalifID) references Calificacion(CalifID)
+)
 
 create table catalogoProductos(
     IDCatalogo int not null AUTO_INCREMENT,
@@ -74,7 +80,7 @@ create table Producto(
     ProdDescripcion varchar(250),
     Stock varchar (10),
     IDCatalogo int,
-    primary key (ProdID), 
+    primary key (ProdID),
 
     foreign key (IDCatalogo) references catalogoProductos(IDCatalogo)
 )

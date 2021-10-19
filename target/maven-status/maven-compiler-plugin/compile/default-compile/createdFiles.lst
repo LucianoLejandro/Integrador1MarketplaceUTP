@@ -1,2 +1,5 @@
-controlador\cvendedor.class
-com\mp\marketplaceutp\Conexion.class
+modelo/TiendaDTO.class
+modelo/List_ProductoDTO.class
+modelo/PedidoDTO.class
+modelo/catalogoProductosDTO.class
+modelo/ProductoDTO.class
