@@ -11,12 +11,12 @@ package modelo;
  */
 public class CalificacionDTO {
     private int CalifID;
-    private String CaliroStars;
+    private String CalifNroStars;
     private String CalifComentario;
 
     public CalificacionDTO(int CalifID, String CaliroStars, String CalifComentario) {
         this.CalifID = CalifID;
-        this.CaliroStars = CaliroStars;
+        this.CalifNroStars = CaliroStars;
         this.CalifComentario = CalifComentario;
     }
 
@@ -28,12 +28,12 @@ public class CalificacionDTO {
         this.CalifID = CalifID;
     }
 
-    public String getCaliroStars() {
-        return CaliroStars;
+    public String getCalifNroStars() {
+        return CalifNroStars;
     }
 
-    public void setCaliroStars(String CaliroStars) {
-        this.CaliroStars = CaliroStars;
+    public void setCalifNroStars(String CalifNroStars) {
+        this.CalifNroStars = CalifNroStars;
     }
 
     public String getCalifComentario() {

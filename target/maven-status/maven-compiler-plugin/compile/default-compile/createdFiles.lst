@@ -1,5 +1,10 @@
 modelo/TiendaDTO.class
 modelo/List_ProductoDTO.class
 modelo/PedidoDTO.class
+modelo/VendedorDTO.class
 modelo/catalogoProductosDTO.class
+com/mp/marketplaceutp/Conexion.class
+modelo/CalificacionDTO.class
+modelo/compradorDTO.class
+controlador/cvendedor.class
 modelo/ProductoDTO.class
