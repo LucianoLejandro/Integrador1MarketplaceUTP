@@ -6,7 +6,7 @@
 //by Lourdes
 package controlador;
 
-import com.mp.marketplaceutp.Conexion;
+//import com.mp.marketplaceutp.Conexion;
 import modelo.VendedorDTO;
 
 import java.io.IOException;
@@ -49,7 +49,8 @@ public class cvendedor extends HttpServlet {
             request.getRequestDispatcher("errores.jsp").forward(request, response);
         }
         else{
-/*            int idvend = 0;
+            /*          
+            int idvend = 0;
             try {
                 idvend = Integer.parseInt(idvendedor);
             } catch (NumberFormatException ex) {
@@ -57,11 +58,11 @@ public class cvendedor extends HttpServlet {
                 request.getSession().setAttribute("error", error);
                 request.getRequestDispatcher("errores.jsp").forward(request, response);
             }
-*/          
+            */          
             //Llenando v1 con los datos recibidos del jsp
             VendedorDTO v1 = new VendedorDTO(vnombres, vapellidop, vapellidom, vusuario, vcontrasenia);
             //Estableciendo conexión a la DB
-            Conexion cn = new Conexion();
+//            Conexion cn = new Conexion();
             //Instanciando los métodos para hacer CRUD en la DB
             VendedorDAO vdao = new VendedorDAO();
             //vdao.Insertar(v1);
