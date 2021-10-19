@@ -1,0 +1,94 @@
+create database marketplace08102021v4;
+use marketplace08102021v4;
+
+create table comprador(
+    CID int not null AUTO_INCREMENT,
+    CNombres varchar(255),
+    CApellidoP varchar (255),
+    CApellidoM varchar (255),
+    CDNI varchar (10),
+    CTelefono varchar (20),
+    CodDireccion int,
+
+    primary key (CID)
+    )
+create table Vendedor(
+    idvendedor int not null AUTO_INCREMENT,
+    VNombres varchar (255),
+    VApellidoP varchar (255),
+    VApellidoM varchar (255),
+    VUsuario varchar (50),
+    Vcontrasenia varchar (20),
+    primary key (idvendedor)
+    )
+create table Pedido(
+    PedidoID int not null AUTO_INCREMENT,
+    Total varchar(50),
+    FechaPedido date,
+    FechaEntrega date,
+    ListPedidosID int,
+    CID int,
+    TipoPago varchar(255),
+
+    primary key (PedidoID),
+    foreign key (ListPedidosID) references ListaPedidos(ListPedidosID),
+    foreign key (CID) references comprador(CID)  
+)
+
+create table Calificacion(
+    CalifID int not null AUTO_INCREMENT,
+    CalifNroStars varchar(50),
+    CalifComentario varchar(255),
+    primary key (CalifID)
+
+)
+create table Tienda(
+    TRUC int not null AUTO_INCREMENT,
+    TNombre varchar(50),
+    TDescripcion varchar (255),
+    idvendedor int,
+    CalifID int,
+    Distrito varchar(255),
+
+    primary key (TRUC),
+    foreign key (idvendedor) references Vendedor(idvendedor),  
+    foreign key (CalifID) references Calificacion(CalifID) 
+) 
+
+create table catalogoProductos(
+    IDCatalogo int not null AUTO_INCREMENT,
+    marcas varchar(50),
+    presentaciones varchar(50),
+    unidadesMedida varchar(50),
+    TRUC int,
+
+    primary key (IDCatalogo),
+    foreign key (TRUC) references Tienda(TRUC)
+)
+
+create table Producto(
+    ProdID int not null AUTO_INCREMENT,
+    ProdNombre varchar(50),
+    ProdMarca varchar(50),
+    ProdPrecio varchar(50),
+    ProdDescripcion varchar(250),
+    Stock varchar (10),
+    IDCatalogo int,
+    primary key (ProdID), 
+
+    foreign key (IDCatalogo) references catalogoProductos(IDCatalogo)
+)
+
+create table List_Producto(
+    ListProductoID int not null AUTO_INCREMENT,
+    ProdID int,
+    ListPedidosID int,
+    Descripcion varchar(50),
+
+    primary key (ListProductoID),
+    foreign key (ListPedidosID) references ListaPedidos(ListPedidosID),
+    foreign key (ProdID) references Producto(ProdID)  
+
+)
+
+
