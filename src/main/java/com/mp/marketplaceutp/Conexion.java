@@ -7,24 +7,17 @@ package com.mp.marketplaceutp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import modelo.VendedorDTO;
-
 /**
  *
  * @author luciano
  */
 public class Conexion {
-    Connection miConexion;
-    Statement miStatement;
-    ResultSet miResultSet;
+    Connection miConexion = null;
     
-    public Conexion() {
+    public Connection Conexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             miConexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marketplace08102021v4","root","");
@@ -33,8 +26,10 @@ public class Conexion {
         } catch (SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return miConexion;
     }
     //PAra sacar de aqui
+    /*
     public int Insertar(VendedorDTO v){
         int bandera = 0;
         try {
@@ -47,4 +42,5 @@ public class Conexion {
         }
         return bandera;
     }
+    */
 }

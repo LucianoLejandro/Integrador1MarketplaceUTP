@@ -6,7 +6,8 @@
 //by Lourdes
 package controlador;
 
-import com.mp.marketplaceutp.Conexion;
+//import com.mp.marketplaceutp.Conexion;
+import modelo.VendedorDTO;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,8 +15,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.VendedorDAO;
 
-import modelo.VendedorDTO;
 
 /**
  *
@@ -48,7 +49,8 @@ public class cvendedor extends HttpServlet {
             request.getRequestDispatcher("errores.jsp").forward(request, response);
         }
         else{
-/*            int idvend = 0;
+            /*          
+            int idvend = 0;
             try {
                 idvend = Integer.parseInt(idvendedor);
             } catch (NumberFormatException ex) {
@@ -56,11 +58,17 @@ public class cvendedor extends HttpServlet {
                 request.getSession().setAttribute("error", error);
                 request.getRequestDispatcher("errores.jsp").forward(request, response);
             }
-*/
+            */          
+            //Llenando v1 con los datos recibidos del jsp
             VendedorDTO v1 = new VendedorDTO(vnombres, vapellidop, vapellidom, vusuario, vcontrasenia);
-            Conexion cn = new Conexion();
+            //Estableciendo conexión a la DB
+//            Conexion cn = new Conexion();
+            //Instanciando los métodos para hacer CRUD en la DB
+            VendedorDAO vdao = new VendedorDAO();
+            //vdao.Insertar(v1);
             
-            if (cn.Insertar(v1) > 0){
+            if (vdao.Insertar(v1) >0){
+//            if (cn.Insertar(v1) > 0){
                 request.getRequestDispatcher("exito.jsp").forward(request, response);
                 //Devolviendo valores insertados a web exito.jsp
                 //request.getSession().setAttribute("persona1", p1);
