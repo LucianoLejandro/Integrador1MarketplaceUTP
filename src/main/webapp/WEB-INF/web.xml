@@ -8,6 +8,10 @@
         <servlet-name>cvendedor</servlet-name>
         <servlet-class>controlador.cvendedor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ccomprador.do</servlet-name>
+        <servlet-class>controlador.ccomprador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>persona</servlet-name>
         <url-pattern>/persona.do</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>cvendedor</servlet-name>
         <url-pattern>/cvendedor.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ccomprador.do</servlet-name>
+        <url-pattern>/ccomprador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
