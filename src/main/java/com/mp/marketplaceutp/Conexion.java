@@ -15,18 +15,24 @@ import java.util.logging.Logger;
  * @author luciano
  */
 public class Conexion {
-    Connection miConexion = null;
-    
-    public Connection Conexion() {
+    static{
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            miConexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/marketplace08102021v4","root","");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return miConexion;
+    }
+    
+    public static Connection getConexion() {
+        Connection miConnection = null;
+        try {
+             
+            miConnection =  DriverManager.getConnection("jdbc:mysql://localhost:3306/marketplace08102021v4","root","");
+            
+        } catch (Exception e) {
+                e.printStackTrace();
+        }
+        return miConnection;
     }
     //PAra sacar de aqui
     /*
@@ -38,7 +44,7 @@ public class Conexion {
             miStatement = miConexion.createStatement();
             bandera = miStatement.executeUpdate(query);
         } catch (SQLException ex) {
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(getConexion.class.getName()).log(Level.SEVERE, null, ex);
         }
         return bandera;
     }

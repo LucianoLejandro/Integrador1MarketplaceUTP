@@ -16,13 +16,14 @@ import java.util.logging.Logger;
  * @author luciano
  */
 public class VendedorDAO {
-    Connection miConexion;
-    Statement miStatement;
-    ResultSet miResultSet;
-    Conexion con;
+    Connection miConnection = null;
+    Statement miStatement = null;
+    ResultSet miResultSet = null;
+    //Conexion con2 = null;
     
-    public VendedorDAO(){
-        miConexion = con.Conexion();
+    private Connection Llamar_getConexion(){
+        this.miConnection = Conexion.getConexion();
+        return this.miConnection;
     }
     
     public int Insertar(VendedorDTO v1){
@@ -30,7 +31,11 @@ public class VendedorDAO {
         try {
             String query = "insert into Vendedor (VNombres,VApellidoP,VApellidoM,VUsuario,Vcontrasenia)"
                         +" values ('"+v1.getVNombres()+"','"+v1.getVApellidoP()+"','"+v1.getVApellidoM()+"','"+v1.getVUsuario()+"','"+v1.getVcontrasenia()+"')";
-            miStatement = miConexion.createStatement();
+            
+            //miConnection = Llamar_getConexion();
+            miConnection = Conexion.getConexion();
+            
+            miStatement = miConnection.createStatement();
             bandera = miStatement.executeUpdate(query);
         } catch (SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
@@ -44,7 +49,7 @@ public class VendedorDAO {
         int banderaRead=0;
         try {
             String query = "SELECT * FROM `Vendedor`";
-            miStatement = miConexion.createStatement();
+            miStatement = miConnection.createStatement();
             miResultSet = miStatement.executeQuery(query);
             
             while (miResultSet.next()){
