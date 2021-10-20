@@ -35,6 +35,35 @@ public class VendedorDAO {
         } catch (SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
+        //Probando el método Leer()
+        Leer();
         return bandera;
+    }
+    
+    public void Leer(){
+        int banderaRead=0;
+        try {
+            String query = "SELECT * FROM `Vendedor`";
+            miStatement = miConexion.createStatement();
+            miResultSet = miStatement.executeQuery(query);
+            
+            while (miResultSet.next()){
+
+                int idvendedor = miResultSet.getInt("idvendedor");
+                String VNombres = miResultSet.getString("VNombres");
+                String VApellidoP = miResultSet.getString("VApellidoP");
+                String VApellidoM = miResultSet.getString("VApellidoM");
+                String VUsuario = miResultSet.getString("VUsuario");
+                String Vcontrasenia = miResultSet.getString("Vcontrasenia");
+
+                // print the results
+                System.out.format("%s, %s, %s, %s, %s, %s\n", idvendedor, VNombres, VApellidoP, VApellidoM, VUsuario, Vcontrasenia);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
     }
 }
