@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+controlador\cvendedor.class
+modelo\TiendaDTO.class
+modelo\catalogoProductosDTO.class
+com\mp\marketplaceutp\Conexion.class
+modelo\PedidoDTO.class
+modelo\List_ProductoDTO.class
+modelo\ProductoDTO.class
+=======
 modelo/TiendaDTO.class
 modelo/List_ProductoDTO.class
 modelo/PedidoDTO.class
@@ -9,3 +18,4 @@ modelo/VendedorDAO.class
 modelo/compradorDTO.class
 controlador/cvendedor.class
 modelo/ProductoDTO.class
+>>>>>>> 7bb3dd158f63a2e6ca48a21024d3583706a5c23f

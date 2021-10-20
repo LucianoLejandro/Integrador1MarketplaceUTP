@@ -10,17 +10,17 @@ public class PedidoDTO
     private int PedidoID;
     private String Total;
     private String FechaPedido;
-    private int ListPedidosID;
-    private int CID;
+    private String FechaEntrega;    
     private String TipoPago;
+    //private int ListPedidosID;
+    //private int CID;
     
     public PedidoDTO(int PedidoID, String Total, String FechaPedido, String FechaEntrega, String TipoPago) 
     {
         
         this.PedidoID = PedidoID;
         this.Total = Total;
-        this.FechaPedido = FechaPedido;
-        
+        this.FechaPedido = FechaPedido;        
         this.TipoPago = TipoPago;
     }
     
@@ -47,6 +47,14 @@ public class PedidoDTO
 
     public void setFechaPedido(String FechaPedido) {
         this.FechaPedido = FechaPedido;
+    }
+
+    public String getFechaEntrega() {
+        return FechaEntrega;
+    }
+
+    public void setFechaEntrega(String FechaEntrega) {
+        this.FechaEntrega = FechaEntrega;
     }
 
    

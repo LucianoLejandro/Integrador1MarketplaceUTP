@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\com\mp\marketplaceutp\Conexion.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\modelo\CalificacionDTO.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\modelo\ProductoDTO.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\modelo\catalogoProductosDTO.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\modelo\List_ProductoDTO.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\modelo\TiendaDTO.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\controlador\cvendedor.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\modelo\VendedorDTO.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\modelo\compradorDTO.java
+D:\INTEGRADOR - I\GRUPO\Integrador1MarketplaceUTP\src\main\java\modelo\PedidoDTO.java
+=======
 /home/luciano/Documentos/Integrador/Integrador1MarketplaceUTP/src/main/java/modelo/ProductoDTO.java
 /home/luciano/Documentos/Integrador/Integrador1MarketplaceUTP/src/main/java/modelo/VendedorDTO.java
 /home/luciano/Documentos/Integrador/Integrador1MarketplaceUTP/src/main/java/modelo/compradorDTO.java
@@ -9,3 +21,4 @@
 /home/luciano/Documentos/Integrador/Integrador1MarketplaceUTP/src/main/java/modelo/VendedorDAO.java
 /home/luciano/Documentos/Integrador/Integrador1MarketplaceUTP/src/main/java/modelo/TiendaDTO.java
 /home/luciano/Documentos/Integrador/Integrador1MarketplaceUTP/src/main/java/modelo/List_ProductoDTO.java
+>>>>>>> 7bb3dd158f63a2e6ca48a21024d3583706a5c23f
